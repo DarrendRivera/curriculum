@@ -30,6 +30,7 @@
     --mono:        'DM Mono', monospace;
   }
 
+
   body {
     font-family: var(--font);
     background: #D8D5CF;
@@ -468,7 +469,83 @@
     background: linear-gradient(90deg, var(--gold), var(--gold-light) 60%, transparent 100%);
   }
 
+
+@media (max-width: 700px) {
+
+  body { padding: 0; background: var(--charcoal); }
+
+  .cv {
+    width: 100%;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    box-shadow: none;
+  }
+  .header  { grid-column: 1/2; grid-row: 1/2; }
+  .sidebar { grid-column: 1/2; grid-row: 2/3; overflow: visible; }
+  .main    { grid-column: 1/2; grid-row: 3/4; }
+  .cv-foot { grid-column: 1/2; grid-row: 4/5; }
+
+  .cv-foot::after { left: 0; }
+  .hdr-code { display: none; }
+
+  .header   { padding: 24px 20px 20px; }
+  .sb-inner { padding: 20px 20px 24px; }
+  .main     { padding: 20px 20px 28px; }
+
+  .photo-ring  { width: 110px; height: 110px; }
+
+  .hdr-eyebrow { font-size: 10px; }
+  .hdr-name    { font-size: 24px; margin-bottom: 12px; }
+  .hdr-tagline { font-size: 13px; line-height: 1.7; }
+
+  .sec-h        { font-size: 13px; letter-spacing: 1px; margin-bottom: 14px; }
+  .sec-h .ico   { font-size: 12px; }
+  .sum-hl       { font-size: 13px; }
+  .sum-txt      { font-size: 12px; line-height: 1.8; }
+
+  .exp          { margin-bottom: 18px; padding-bottom: 18px; }
+  .exp-top      { flex-wrap: wrap; }
+  .exp-t        { font-size: 14px; }
+  .exp-d        { font-size: 10px; padding: 3px 10px; }
+  .exp-co       { font-size: 12px; margin-bottom: 10px; }
+  .exp-ul li    { font-size: 12px; line-height: 1.7; margin-bottom: 6px; padding-left: 16px; }
+  .exp-ul li::before { font-size: 10px; }
+
+  .edu-d        { font-size: 13px; }
+  .edu-s        { font-size: 11px; }
+  .edu-badge    { font-size: 10px; padding: 3px 10px; }
+
+  .proj-grid    { grid-template-columns: 1fr; }
+  .proj-t       { font-size: 13px; }
+  .proj-p       { font-size: 12px; line-height: 1.65; }
+
+  .refs-grid    { grid-template-columns: 1fr; }
+  .ref-n        { font-size: 13px; }
+  .ref-r        { font-size: 11px; }
+  .ref-p        { font-size: 12px; }
+
+  .sb-block     { margin-bottom: 26px; }
+  .sb-label     { font-size: 11px; letter-spacing: 1.2px; margin-bottom: 14px; }
+  .c-lbl        { font-size: 9px; }
+  .c-val        { font-size: 12px; }
+  .lang-name    { font-size: 13px; }
+  .lang-lvl     { font-size: 11px; }
+  .lang-track   { height: 3px; }
+  .sk-group-lbl { font-size: 10px; }
+  .pill         { font-size: 11px; padding: 4px 10px; }
+
+  .m-sec        { margin-bottom: 24px; }
+}
+
+@media (max-width: 420px) {
+  .hdr-name { font-size: 20px; }
+  .exp-top  { flex-direction: column; gap: 4px; }
+  .exp-d    { align-self: flex-start; }
+}
+
   @media print {
+
     body { padding: 0; background: white; }
     .cv  { box-shadow: none; }
   }
@@ -628,7 +705,7 @@ const impact = "measurable";</div>
     <section class="m-sec">
       <h2 class="sec-h"><span class="ico">&gt;_</span> Perfil Profesional</h2>
       <div class="summary">
-        <div class="sum-hl">Product Owner &amp; Digital Transformation — MBA · GWU Specialization · Resultados Cuantificables</div>
+        <div class="sum-hl">Product Owner &amp; Digital Transformation — MBA </div>
         <div class="sum-txt">Profesional en Transformación Digital en banca y telecomunicaciones, liderando iniciativas digitales end-to-end. Especialista en Product Management, Desarrollo Web y estrategias de adquisición digital bajo metodologías ágiles. Logros incluyen +35% en Conversiones Orgánicas y ejecución de proyectos en tiempo y presupuesto. MBA en Transformación Digital · Licenciado con Honores · 1er Lugar Nacional (Sigma Lambda, 2019).</div>
       </div>
     </section>
